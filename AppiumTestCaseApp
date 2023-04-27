@@ -1,0 +1,15 @@
+#Automation to Open cricinfo app
+#Learned Today 
+#Tried The Execution on Android Studio
+
+from appium import webdriver
+
+desired_cap = {
+    "deviceName": "emulator-5554",
+    "platformName": "Android",
+    "appPackage": "com.july.cricinfo",
+    "appWaitActivity": "com.cricinfo.app.android.activities.CiMainActivity",
+    "app": "C:\\Users\\Admin\\Downloads\\com.july.cricinfo.apk"
+}
+
+driver = webdriver.Remote("http://localhost:4723/wd/hub",desired_cap)
